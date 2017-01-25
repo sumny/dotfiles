@@ -1,0 +1,1 @@
+/usr/local/bin/screen_rotation.sh

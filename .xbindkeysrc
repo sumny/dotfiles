@@ -1,0 +1,29 @@
+# ~/.xbindkeysrc
+
+# Mute volume
+"pamixer -t"
+XF86AudioMute
+
+# Decrease volume
+"pamixer --decrease 5"
+XF86AudioLowerVolume
+
+# Increase volume
+"pamixer --increase 5"
+XF86AudioRaiseVolume
+
+# Rotate screen
+"/usr/local/bin/screen_rotation.sh"
+XF86Launch1
+
+# Decrease brightness
+#"xbacklight -dec 20"
+#XF86MonBrightnessDown
+
+# Increase brightness
+#"xbacklight -inc 20"
+#XF86MonBrightnessUp
+
+# Lock
+"i3lock -c 000000"
+XF86Battery
