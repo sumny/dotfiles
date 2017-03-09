@@ -25,5 +25,5 @@ XF86Launch1
 #XF86MonBrightnessUp
 
 # Lock
-"i3lock -c 000000"
+"i3lock-fancy"
 XF86Battery
