@@ -146,4 +146,4 @@ bar {
 assign [class="Firefox"] $workspace2
 exec i3-sensible-terminal
 exec firefox
-exec_always feh --bg-scale ~/Pictures/Wallpaper7.png
+#exec_always feh --bg-scale ~/Pictures/Wallpaper7.png
