@@ -11,3 +11,4 @@ PS1='[\u@\h \W]\$ '
 screenfetch -d '-gtk'
 
 export QEMU_AUDIO_DRV=alsa
+
