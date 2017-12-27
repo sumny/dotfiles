@@ -23,6 +23,8 @@ set hlsearch
 set noundofile
 set nu
 set mouse=a
+set termguicolors
+colo solarized
 syntax on
 
 set statusline+=%#warningmsg#
@@ -31,7 +33,7 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_wq = 1
 
 let g:syntastic_r_checkers = ['lintr']
 let g:syntastic_enable_r_lintr_checker = 1
