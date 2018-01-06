@@ -2,7 +2,7 @@
 
 set $mod Mod4
 
-font pango:EnvyCodeR 8
+font pango:EnvyCodeR 7
 
 floating_modifier $mod
 
