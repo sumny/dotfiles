@@ -24,7 +24,6 @@ set noundofile
 set nu
 set mouse=a
 set termguicolors
-colo solarized
 syntax on
 
 set statusline+=%#warningmsg#

@@ -6,7 +6,7 @@ font pango:EnvyCodeR 7
 
 floating_modifier $mod
 
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec gnome-terminal
 
 bindsym $mod+Shift+q kill
 
@@ -144,6 +144,6 @@ bar {
 }
 
 assign [class="Firefox"] $workspace2
-exec i3-sensible-terminal
+exec gnome-terminal
 exec firefox
-#exec_always feh --bg-scale ~/Pictures/Wallpaper7.png
+exec_always feh --bg-scale ~/Pictures/Wallpaper8.png
