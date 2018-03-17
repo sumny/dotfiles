@@ -1,4 +1,3 @@
-#
 # ~/.bashrc
 #
 
@@ -9,6 +8,4 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 screenfetch -d '-gtk'
-
-export QEMU_AUDIO_DRV=alsa
 
