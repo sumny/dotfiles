@@ -64,11 +64,12 @@ bindsym $mod+a focus parent
 
 set $workspace1 ""
 set $workspace2 ""
+set $workspace3 ""
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
-bindsym $mod+3 workspace 3
+bindsym $mod+3 workspace $workspace3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
@@ -80,7 +81,7 @@ bindsym $mod+0 workspace 10
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
 bindsym $mod+Shift+2 move container to workspace $workspace2
-bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+3 move container to workspace $workspace3
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
@@ -144,6 +145,8 @@ bar {
 }
 
 assign [class="Firefox"] $workspace2
+assign [class="Sylpheed"] $workspace3
 exec gnome-terminal
 exec firefox
-exec_always feh --bg-scale ~/Pictures/Wallpaper8.png
+exec sylpheed
+#exec_always feh --bg-scale ~/Pictures/Wallpaper8.png
