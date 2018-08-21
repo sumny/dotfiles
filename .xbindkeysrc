@@ -25,5 +25,5 @@ XF86Launch1
 #XF86MonBrightnessUp
 
 # Lock
-"i3lock-fancy"
+"i3lock-fancy -f /usr/share/fonts/TTF/EnvyCodeR.ttf"
 XF86Battery
