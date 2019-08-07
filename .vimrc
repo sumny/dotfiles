@@ -17,7 +17,7 @@ runtime! archlinux.vim
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set tw=99
+set tw=79
 set nobackup
 set hlsearch
 set noundofile

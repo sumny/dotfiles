@@ -144,7 +144,7 @@ bar {
 	}
 }
 
-assign [class="Firefox"] $workspace2
+assign [class="firefox"] $workspace2
 assign [class="Sylpheed"] $workspace3
 exec gnome-terminal
 exec firefox
