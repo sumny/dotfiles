@@ -17,7 +17,7 @@ runtime! archlinux.vim
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set tw=79
+set tw=80
 set nobackup
 set hlsearch
 set noundofile
@@ -29,32 +29,33 @@ set encoding=utf-8
 set fileencoding=utf-8
 set showcmd
 
-" lintr
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_r_checkers = ['lintr']
-let g:syntastic_enable_r_lintr_checker = 1
-let g:syntastic_r_lintr_linters = "with_defaults(object_usage_linter = NULL, closed_curly_linter = NULL, commas_linter = NULL, line_length_linter(81), camel_case_linter = NULL, snake_case_linter = NULL, open_curly_linter = NULL, spaces_left_parentheses_linter = NULL, todo_comment_linter = NULL, trailing_blank_lines_linter = NULL, commented_code_linter = NULL, multiple_dots_linter = NULL)"
-
-" vim-plug
+"vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" Specify a directory for plugins
+"Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 "Nvim-R
 Plug 'jalvesaq/Nvim-R'
+"editorconfig-vim
+Plug 'editorconfig/editorconfig-vim'
+"ale
+Plug 'dense-analysis/ale'
 call plug#end()
 
 "Nvim-R
-let R_in_buffer=0
+let R_in_buffer = 0
 let g:rout_follow_colorscheme = 1
 let g:Rout_more_colors = 1
+
+"ale
+let g:ale_fixers = {
+   \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+   \   'r': ['styler'],
+\}
+let g:ale_r_styler_options = 'styler::mlr_style'
+let g:ale_r_lintr_options = "with_defaults(line_length_linter(80))"
+let g:ale_r_lintr_lint_package = 0

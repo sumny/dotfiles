@@ -2,7 +2,7 @@
 # /etc/X11/xinit/xinitrc
 
 IN="LVDS1"
-EXT="HDMI1"
+EXT="DP1"
 
 if (xrandr | grep "$EXT disconnected"); then
     xrandr --output $EXT --off --output $IN --auto
@@ -10,7 +10,7 @@ else
     xrandr --output $IN --auto --pos 0x312 --output $EXT --auto --pos 1366x0
 fi
 
-/usr/bin/xcalib -d :0 /usr/share/color/icc/colord/Monitor_5-24-2012_1.icc
+# /usr/bin/xcalib -d :0 /usr/share/color/icc/colord/Monitor_5-24-2012_1.icc
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
